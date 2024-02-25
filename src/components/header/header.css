@@ -38,8 +38,8 @@ header {
   position: absolute;
   z-index: 200;
 }
-span::before,
-span::after {
+.bar::before,
+.bar::after {
   content: "";
   display: block;
   background-color: #fff;

@@ -23,7 +23,7 @@ const Homescreen = () => {
         <h1>
           Welcome To
           <br />
-          <span>{text}</span>
+          <span className="text">{text}</span>
           <Cursor />
         </h1>
       </div>
