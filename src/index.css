@@ -3,3 +3,8 @@ html {
   background: #001220;
   scroll-behavior: smooth;
 }
+
+body {
+  margin: 0;
+  padding: 0;
+}

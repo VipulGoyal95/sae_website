@@ -1,11 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import "./header.css";
 import icon from "../header/sae-logo.png";
 
 const Header = () => {
+  const [handleToggle, setToggle] = useState(false);
+  //setting up the clicked Effect
+  function barClicked() {
+    setToggle(!handleToggle);
+    console.log(handleToggle);
+  }
   return (
     <header>
-      <nav>
+      <nav className="headers">
         <div className="sae-icons">
           <img src={icon} alt="logo" className="sae-logo" />
           <div className="title">
@@ -25,6 +31,30 @@ const Header = () => {
           </li>
           <li>
             <a href="#about">Nitrox</a>
+          </li>
+        </ul>
+      </nav>
+      <div
+        className={handleToggle ? "bars active" : "bars"}
+        id="nav-action"
+        onClick={barClicked}
+      >
+        <span className="bar"> </span>
+      </div>
+
+      <nav id="nav" className={handleToggle ? "visible" : ""}>
+        <ul>
+          <li className="shape-circle circle-one">
+            <a href="#Contact">Nitrox</a>
+          </li>
+          <li className="shape-circle circle-two">
+            <a href="#Blog">Accelerons</a>
+          </li>
+          <li className="shape-circle circle-three">
+            <a href="#Work">Autokriti</a>
+          </li>
+          <li className="shape-circle circle-five">
+            <a href="#Home">Home</a>
           </li>
         </ul>
       </nav>

@@ -7,6 +7,7 @@ const Homescreen = () => {
   const [text] = useTypewriter({
     words: [
       "SAE Nit Kurukshetra",
+      "Society of Automotive Enginners"
     ],
     loop: {},
     typeSpeed: 30,
