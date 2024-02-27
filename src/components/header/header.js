@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./header.css";
 import icon from "../header/sae-logo.png";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [handleToggle, setToggle] = useState(false);
@@ -21,16 +22,16 @@ const Header = () => {
         </div>
         <ul>
           <li>
-            <a href="#portfolio">Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <a href="#press">Autokriti</a>
+            <Link to="/autokriti">Autokriti</Link>
           </li>
           <li>
-            <a href="#shop">Accelerons</a>
+            <Link to="/accelerons">Accelerons</Link>
           </li>
           <li>
-            <a href="#about">Nitrox</a>
+            <Link to="/nitrox">Nitrox</Link>
           </li>
         </ul>
       </nav>

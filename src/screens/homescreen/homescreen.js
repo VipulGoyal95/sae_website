@@ -7,6 +7,9 @@ import icon2 from "./assets/ATVC.jpg";
 import icon3 from "./assets/formula-bharat.png";
 import icon4 from "./assets/Supra-sae-india.jpg";
 import icon5 from "./assets/formula-imperials.jpg";
+import icon6 from "./assets/abc1new.dfa5ca88.webp";
+import icon7 from "./assets/def1.922ff2dd.webp";
+import icon8 from "./assets/autokriti.jpg";
 
 const Homescreen = () => {
   const [text] = useTypewriter({
@@ -134,7 +137,19 @@ const Homescreen = () => {
           arrow_forward_ios
         </button>
       </div>
-      <div className="container-3"></div>
+      <div className="container-3">
+        <div class="container">
+          <div class="triangle left">
+            <img src={icon6} alt="" />
+          </div>
+          <div class="triangle center">
+          <img src={icon8} alt="" />
+          </div>
+          <div class="triangle right">
+            <img src={icon7} alt="" />
+          </div>
+        </div>
+      </div>
     </>
   );
 };
