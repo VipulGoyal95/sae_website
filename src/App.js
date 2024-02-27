@@ -1,10 +1,11 @@
 import Homescreen from "./screens/homescreen/homescreen";
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
+    <>
       <Homescreen />
-    </div>
+    </>
   );
 }
 
