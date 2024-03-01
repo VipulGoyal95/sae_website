@@ -1,8 +1,7 @@
 footer {
-  font-family: "Poppins", sans-serif;
   width: 100%;
-  position: absolute;
-  bottom: 0;
+  /* position: absolute; */
+  /* bottom: 0; */
   background: linear-gradient(to right, #00093c, #2d0b00);
   color: #fff;
   padding: 25px 0 30px;

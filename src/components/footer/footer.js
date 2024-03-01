@@ -2,6 +2,7 @@ import React from "react";
 import "./footer.css";
 import { FaInstagram } from "react-icons/fa";
 import { FaFacebookSquare } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -30,22 +31,37 @@ const Footer = () => {
           </h3>
           <ul>
             <li>
-              <p>Team accelerons</p>
-              <div className="insta">
-                <FaInstagram />
-              </div>
+              <Link to="/accelerons">
+                <p>Team accelerons</p>
+              </Link>
+              <Link
+                to="https://www.instagram.com/accelerons_nitkkr"
+                target="_blank"
+              >
+                <div className="insta">
+                  <FaInstagram />
+                </div>
+              </Link>
             </li>
             <li>
-              <p>Team nitrox</p>
-              <div className="insta">
-                <FaInstagram />
-              </div>
+              <Link to="/nirox">
+                <p>Team nitrox</p>
+              </Link>
+              <Link to="https://www.instagram.com/nitroxteam" target="_blank">
+                <div className="insta">
+                  <FaInstagram />
+                </div>
+              </Link>
             </li>
             <li>
-              <p>Autokriti</p>
-              <div className="insta">
-                <FaInstagram />
-              </div>
+              <Link to="/autokriti">
+                <p>Autokriti</p>
+              </Link>
+              <Link to="https://www.instagram.com/autokriti" target="_blank">
+                <div className="insta">
+                  <FaInstagram />
+                </div>
+              </Link>
             </li>
           </ul>
         </div>
@@ -57,8 +73,15 @@ const Footer = () => {
             </div>
           </h3>
           <ul>
-            <li>saenitkkr@nitkkr.ac.in</li>
-            <li>Linkedin</li>
+            <Link to="mailto:saenitkkr@nitkkr.ac.in">
+              <li>saenitkkr@nitkkr.ac.in</li>
+            </Link>
+            <Link
+              to="https://www.linkedin.com/company/sae-nit-kkr"
+              target="_blank"
+            >
+              <li>Linkedin</li>
+            </Link>
             <li>Contact Us</li>
           </ul>
         </div>
