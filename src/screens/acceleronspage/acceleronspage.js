@@ -7,6 +7,13 @@ import "./acceleronspage.css";
 import icon2 from "./acceleronsimage.jpg";
 import icon3 from "./supraold.webp";
 import icon4 from "./formulabharat.webp";
+import { gallaryarray } from "./gallaryarray";
+import Imagegallary from "../../components/imagegallary/imagegallary";
+import Profilecard from "../../components/profilecard/profilecard";
+import captain from "./assets/Yasharora.d6916acd.jpg";
+import vicecaptain from "./assets/Bhupeksh.7df9baf5.jpg";
+import evhead from "./assets/man.b3e9680f.png";
+import Footer from "../../components/footer/footer";
 
 const Acceleronspage = () => {
   const [text] = useTypewriter({
@@ -98,6 +105,40 @@ const Acceleronspage = () => {
             </figure>
           </div>
         </div>
+        <Imagegallary gallaryarray={gallaryarray} />
+        <div className="profile-container">
+          <h1>Team Representatives</h1>
+          <div className="row-p">
+            <div className="inner-container">
+              <Profilecard
+                imgURL={captain}
+                name={"Yash Arora"}
+                title={"Captain"}
+                LinkedinURL={
+                  "https://www.linkedin.com/in/vaibhav-dharmani-aa91a7199/"
+                }
+                emailId={"dharmani.vaibhav.2001@gmail.com"}
+              />
+              <Profilecard
+                imgURL={vicecaptain}
+                name={"Bhupeksh"}
+                title={"Vice-Captain"}
+                LinkedinURL={"https://www.linkedin.com/in/hk2107/"}
+                emailId={"hkhatri2107@gmail.com"}
+              />
+              <Profilecard
+                imgURL={evhead}
+                name={"Manikya"}
+                title={"Ev-head"}
+                LinkedinURL={
+                  "https://www.linkedin.com/in/vinay-saini-6a3044241/"
+                }
+                emailId={"sainivinay013@gmail.com"}
+              />
+            </div>
+          </div>
+        </div>
+        <Footer/>
       </div>
     </>
   );

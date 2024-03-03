@@ -1,10 +1,33 @@
+.galleryBody {
+  position: relative;
+  margin-top: 50px;
+}
+
 .gallery {
+  background-color: #222;
   display: flex;
   flex-wrap: wrap;
   width: 100%;
   overflow: hidden;
-  max-width: 1300px;
+  margin: 20px auto;
+}
+button {
+  cursor: pointer;
+  position: absolute;
+  top: 95%;
+  left: 50%;
   margin: auto;
+  background-color: transparent;
+  border: none;
+  color: red;
+}
+.gallery2 {
+  background-color: #222;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  overflow: hidden;
+  margin: 20px auto;
 }
 .gallery__strip {
   min-height: 100vh;
@@ -18,10 +41,42 @@
 }
 @media (min-width: 500px) {
   .gallery__strip__wrapper {
-    flex: 0 0 50%;
+    flex: 0 0 40%;
   }
 }
+
+@media (min-width: 450px) {
+  .gallery {
+    height: 150vh;
+  }
+  .gallery2 {
+    height: 300vh;
+  }
+  .gallery__strip.one {
+    animation: 60s move-it ease alternate infinite 5s;
+    transform: translateY(2%);
+  }
+  .gallery__strip.three {
+    animation: 70s move-it ease alternate infinite 6s;
+    transform: translateY(2%);
+  }
+  .gallery__strip.two {
+    animation: 58s move-it-2 ease alternate infinite 5s;
+    transform: translateY(-50%);
+  }
+  .gallery__strip.four {
+    animation: 65s move-it-2 ease alternate infinite 5.5s;
+    transform: translateY(-50%);
+  }
+  .gallery__strip:hover {
+    animation-play-state: paused;
+  }
+}
+
 @media (min-width: 950px) {
+  .gallery2 {
+    height: 200vh;
+  }
   .gallery {
     height: 100vh;
   }
@@ -45,7 +100,7 @@
     animation-play-state: paused;
   }
   .gallery__strip__wrapper {
-    flex: 0 0 25%;
+    flex: 0 0 24%;
   }
 }
 .photo {

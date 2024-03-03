@@ -23,18 +23,18 @@ const Header = () => {
             </div>
           </div>
           <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/autokriti">Autokriti</Link>
-            </li>
-            <li>
-              <Link to="/accelerons">Accelerons</Link>
-            </li>
-            <li>
-              <Link to="/nitrox">Nitrox</Link>
-            </li>
+            <Link to="/">
+              <li>Home</li>
+            </Link>
+            <Link to="/autokriti">
+              <li>Autokriti</li>
+            </Link>
+            <Link to="/accelerons">
+              <li>Accelerons</li>
+            </Link>
+            <Link to="/nitrox">
+              <li>Nitrox</li>
+            </Link>
           </ul>
         </nav>
         <div
@@ -47,18 +47,18 @@ const Header = () => {
 
         <nav className={handleToggle ? "nav" : "hide"}>
           <ul>
-            <li className="shape-circle circle-one">
-              <a href="#Contact">Nitrox</a>
-            </li>
-            <li className="shape-circle circle-two">
-              <a href="#Blog">Accelerons</a>
-            </li>
-            <li className="shape-circle circle-three">
-              <a href="#Work">Autokriti</a>
-            </li>
-            <li className="shape-circle circle-five">
-              <a href="#Home">Home</a>
-            </li>
+            <Link href="/nitrox">
+              <li className="shape-circle circle-one">Nitrox</li>
+            </Link>
+            <Link href="/accelerons">
+              <li className="shape-circle circle-two">Accelerons</li>
+            </Link>
+            <Link href="/autokriti">
+              <li className="shape-circle circle-three">Autokriti</li>
+            </Link>
+            <Link href="/">
+              <li className="shape-circle circle-five">Home</li>
+            </Link>
           </ul>
         </nav>
       </div>

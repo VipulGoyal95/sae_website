@@ -27,6 +27,7 @@ const Homescreen = () => {
     loop: {},
     typeSpeed: 30,
   });
+  // console.log(1);
   return (
     <>
       <Header />

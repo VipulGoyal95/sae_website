@@ -1,0 +1,57 @@
+.registration-container {
+  h1 {
+    text-align: center;
+    color: white;
+  }
+}
+
+.register {
+  position: relative;
+  left: 10%;
+  border: 1px solid white;
+  width: fit-content;
+  padding: 20px;
+  border-radius: 10px;
+}
+.register form {
+  color: white;
+  input {
+    width: 300px;
+    margin: 10px 0;
+    border-radius: 5px;
+    height: 30px;
+  }
+  input:focus {
+    outline: none;
+  }
+  select {
+    width: 300px;
+    margin: 10px 0;
+    border-radius: 5px;
+    height: 30px;
+  }
+  input[type="checkbox"] {
+    width: 12px;
+  }
+  input[type="submit"] {
+    width: 100px;
+    background-color: blue;
+    border: none;
+    color: white;
+    font-weight: 700;
+    height: 35px;
+    font-size: 15px;
+  }
+}
+.info-button {
+  cursor: pointer;
+  font-size: 30px;
+}
+.referral-info {
+  display: none;
+  cursor: pointer;
+}
+
+.info-button:hover .referral-info {
+  display: block;
+}
