@@ -2,20 +2,15 @@ import React, { useState } from "react";
 import Header from "../../components/header/header";
 import "./registrationform.css";
 import Footer from "../../components/footer/footer";
-import { CiCircleInfo, CiMaximize2 } from "react-icons/ci";
+import { CiCircleInfo } from "react-icons/ci";
 
 const Registrationform = () => {
   var [price, setPrice] = useState(0);
   var [accomodatePrice, setAccomodatePrice] = useState(0);
-  var checkcount = 0;
+  const [mouseover, setMouseover] = useState(false);
+  console.log(mouseover);
+  // var checkcount = 0;
   const handlecheck = (val) => {
-    // console.log(val.checked);
-    // console.log(val.value);
-    checkcount++;
-    if (checkcount > 2) {
-      console.warn("you can choose CiMaximize2");
-    }
-
     if (val.checked === true && val.value === "IOT") {
       setPrice((price += 2750));
     } else if (val.checked === false && val.value === "IOT") {
@@ -45,6 +40,27 @@ const Registrationform = () => {
       <Header />
       <div className="registration-container">
         <h1>Registration Form</h1>
+        <div className="rightcontainer">
+          <div className="content-right">
+            <h1>Instructions</h1>
+            <ul>
+              <li>
+                * Make sure your email id is correct as you will be getting
+                confirmation on that email
+              </li>
+              <li>
+                * You can choose Maximum 2 Departments. Each department is 3
+                Days Long + 1 Day Guest Lecture
+              </li>
+              <li> * You have to show QR code at the time of arrival.</li>
+              <li>
+                * In case of any issue or payment failure, please contact
+                +91-9027073663
+              </li>
+              <li> * Referal IDs are case-sensitive</li>
+            </ul>
+          </div>
+        </div>
         <div className="register">
           <form action="post">
             <label htmlFor="fullname">Full Name*</label>
@@ -85,7 +101,11 @@ const Registrationform = () => {
             <br />
             <div style={{ display: "flex", alignItems: "center", gap: "5px" }}>
               <input type="text" name="referral" />
-              <CiCircleInfo className="info-button" />
+              <CiCircleInfo
+                className="info-button"
+                onMouseOver={() => setMouseover(true)}
+                onMouseLeave={() => setMouseover(false)}
+              />
             </div>
             <br />
             <label htmlFor="">Select Your Departments (Max. 2)</label>
@@ -160,11 +180,14 @@ const Registrationform = () => {
               <label htmlFor="accomodation">Need Accomodation & food</label>
               <br />
             </div>
-            <label htmlFor="">Amount (₹) : {accomodatePrice}</label><br></br>
+            <label htmlFor="">Amount (₹) : {accomodatePrice}</label>
+            <br></br>
             <input type="submit" value="Confirm" />
           </form>
         </div>
-        <div className="referral-info">
+        <div
+          className={mouseover ? "referral-info-show" : "referral-info-hide"}
+        >
           <p>
             Enter only if you are applying through an ambassador(max. 10% off)
           </p>

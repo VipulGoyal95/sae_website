@@ -47,11 +47,62 @@
   cursor: pointer;
   font-size: 30px;
 }
-.referral-info {
-  display: none;
+.referral-info-show {
+  width: 150px;
+  border: 1px solid;
+  border-radius: 10px;
   cursor: pointer;
+  display: block;
+  position: absolute;
+  top: 150%;
+  left: 36%;
+  padding: 10px;
+  background-color: rgb(127, 157, 255);
+  p {
+    margin: 0;
+  }
 }
 
-.info-button:hover .referral-info {
-  display: block;
+.referral-info-hide {
+  display: none;
+}
+
+.rightcontainer {
+  border: 1px solid;
+  border-radius: 10px;
+  color: white;
+  width: 340px;
+  position: absolute;
+  top: 50%;
+  left: 70%;
+}
+
+.rightcontainer .content-right {
+  padding: 15px 20px;
+  h1 {
+    text-align: center;
+    margin: 5px 0;
+  }
+}
+.rightcontainer .content-right ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  li {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .rightcontainer {
+    position: relative;
+    left: 0;
+    margin: auto;
+  }
+
+  .register {
+    left: 0;
+    margin: auto;
+    margin-top: 50px;
+  }
 }

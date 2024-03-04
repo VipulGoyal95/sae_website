@@ -47,18 +47,18 @@ const Header = () => {
 
         <nav className={handleToggle ? "nav" : "hide"}>
           <ul>
-            <Link href="/nitrox">
-              <li className="shape-circle circle-one">Nitrox</li>
-            </Link>
-            <Link href="/accelerons">
-              <li className="shape-circle circle-two">Accelerons</li>
-            </Link>
-            <Link href="/autokriti">
-              <li className="shape-circle circle-three">Autokriti</li>
-            </Link>
-            <Link href="/">
-              <li className="shape-circle circle-five">Home</li>
-            </Link>
+            <li className="shape-circle circle-one">
+              <Link to="/nitrox">Nitrox</Link>
+            </li>
+            <li className="shape-circle circle-two">
+              <Link to="/accelerons">Accelerons</Link>
+            </li>
+            <li className="shape-circle circle-three">
+              <Link to="/autokriti">Autokriti</Link>
+            </li>
+            <li className="shape-circle circle-five">
+              <Link to="/">Home</Link>
+            </li>
           </ul>
         </nav>
       </div>

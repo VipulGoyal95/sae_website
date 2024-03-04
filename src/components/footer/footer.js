@@ -1,7 +1,7 @@
 import React from "react";
 import "./footer.css";
 import { FaInstagram } from "react-icons/fa";
-import { FaFacebookSquare } from "react-icons/fa";
+// import { FaFacebookSquare } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -16,10 +16,11 @@ const Footer = () => {
             </div>
           </h3>
           <ul>
-            <li>Achivements</li>
-            <li>Almuni</li>
             <li>Blogs</li>
             <li>Sponsors</li>
+            <Link to="contactus">
+              <li>Contact Us</li>
+            </Link>
           </ul>
         </div>
         <div className="col">
@@ -82,7 +83,9 @@ const Footer = () => {
             >
               <li>Linkedin</li>
             </Link>
-            <li>Contact Us</li>
+            <Link to="/contactus">
+              <li>Contact Us</li>
+            </Link>
           </ul>
         </div>
         <div className="col">
@@ -93,8 +96,12 @@ const Footer = () => {
             </div>
           </h3>
           <ul>
-            <li>Terms and Conditions</li>
-            <li>Privacy Policy</li>
+            <Link to="/termsandconditions">
+              <li>Terms and Conditions</li>
+            </Link>
+            <Link to="/privacypolicy">
+              <li>Privacy Policy</li>
+            </Link>
           </ul>
         </div>
       </div>

@@ -55,9 +55,9 @@
 
 @media (max-width: 500px) {
   .text::before,
-.text::after{
-  width: 80%;
-}
+  .text::after {
+    display: none;
+  }
 }
 
 .Container-2 {
@@ -450,6 +450,14 @@
 @media (max-width: 590px) {
   .profile-container .row-p .col-p {
     flex-basis: 52%;
+    margin: auto;
+    height: 400px;
+  }
+}
+
+@media (max-width: 460px) {
+  .profile-container .row-p .col-p {
+    flex-basis: 75%;
     margin: auto;
     height: 400px;
   }

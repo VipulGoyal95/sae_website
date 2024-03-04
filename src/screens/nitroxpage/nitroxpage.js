@@ -115,7 +115,7 @@ const Nitroxpage = () => {
               />
               <Profilecard
                 imgURL={vicecaptain}
-                name={"Amnol"}
+                name={"Anmol"}
                 title={"Vice-Captain"}
                 LinkedinURL={"https://www.linkedin.com/in/hk2107/"}
                 emailId={"hkhatri2107@gmail.com"}
