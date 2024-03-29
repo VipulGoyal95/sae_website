@@ -46,6 +46,9 @@
 }
 
 @media (min-width: 350px) {
+  .gallery__strip__wrapper {
+    flex: 0 0 49.5%;
+  }
   .gallery {
     height: 150vh;
   }
@@ -55,18 +58,22 @@
   .gallery__strip.one {
     animation: 60s move-it ease alternate infinite 5s;
     transform: translateY(2%);
+    overflow-x: hidden;
   }
   .gallery__strip.three {
     animation: 70s move-it ease alternate infinite 6s;
     transform: translateY(2%);
+    overflow-x: hidden;
   }
   .gallery__strip.two {
     animation: 58s move-it-2 ease alternate infinite 5s;
     transform: translateY(-50%);
+    overflow-x: hidden;
   }
   .gallery__strip.four {
     animation: 65s move-it-2 ease alternate infinite 5.5s;
     transform: translateY(-50%);
+    overflow-x: hidden;
   }
   .gallery__strip:hover {
     animation-play-state: paused;

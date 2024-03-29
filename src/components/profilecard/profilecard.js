@@ -3,9 +3,14 @@ import "./profilecard.css";
 import { FaLinkedin } from "react-icons/fa6";
 import { MdMail } from "react-icons/md";
 
-const Profilecard = ({ imgURL, name, title, LinkedinURL, emailId }) => {
+const Profilecard = ({ imgURL, name, title, LinkedinURL, emailId,speed }) => {
   return (
-    <div className="col-p">
+    <div
+      data-aos="fade-right"
+      data-aos-once="true"
+      data-aos-offset={speed}
+      className="col-p"
+    >
       <div className="our-team">
         <div className="picture">
           <img className="img-fluid" src={imgURL} alt="" />

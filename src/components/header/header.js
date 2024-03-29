@@ -48,16 +48,16 @@ const Header = () => {
         <nav className={handleToggle ? "nav" : "hide"}>
           <ul>
             <li className="shape-circle circle-one">
-              <Link to="/nitrox">Nitrox</Link>
+              <Link to="/nitrox" className="nitrox-text">Nitrox</Link>
             </li>
             <li className="shape-circle circle-two">
-              <Link to="/accelerons">Accelerons</Link>
+              <Link to="/accelerons" className="accelerons-text">Accelerons</Link>
             </li>
             <li className="shape-circle circle-three">
-              <Link to="/autokriti">Autokriti</Link>
+              <Link to="/autokriti" className="autokriti-text">Autokriti</Link>
             </li>
             <li className="shape-circle circle-five">
-              <Link to="/">Home</Link>
+              <Link to="/" className="home-text">Home</Link>
             </li>
           </ul>
         </nav>

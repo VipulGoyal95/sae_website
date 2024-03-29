@@ -86,7 +86,7 @@
   height: 100vh;
 }
 
-.nav a {
+.nav .home-text {
   color: #fff;
   text-decoration: none;
   line-height: 70vw;
@@ -99,6 +99,50 @@
   border-radius: 50%;
   transition: all 0.5s;
 }
+
+.nav .nitrox-text {
+  color: #fff;
+  text-decoration: none;
+  line-height: 70vw;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-indent: 50vw;
+  border-radius: 50%;
+  transition: all 0.5s;
+}
+
+.nav .accelerons-text {
+  color: #fff;
+  text-decoration: none;
+  line-height: 70vw;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-indent: 50vw;
+  border-radius: 50%;
+  transition: all 0.5s;
+}
+
+.nav .autokriti-text {
+  color: #fff;
+  text-decoration: none;
+  line-height: 70vw;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-indent: 50vw;
+  border-radius: 50%;
+  transition: all 0.5s;
+}
+
+
 
 .nav a:hover {
   background: #357ffd;
@@ -172,12 +216,12 @@ ul {
 
 .nav li:nth-child(2) a {
   line-height: 200vw !important;
-  text-indent: 17vw !important;
+  text-indent: 7vw !important;
 }
 
 .nav li:nth-child(3) a {
   line-height: 137vw !important;
-  text-indent: 17vw !important;
+  text-indent: 11vw !important;
 }
 
 .nav li:last-child a {
@@ -256,7 +300,7 @@ a {
     height: 2.75rem;
   }
 }
-@media (max-width: 800px) {
+@media (max-width: 859px) {
   .headers {
     justify-content: left;
   }

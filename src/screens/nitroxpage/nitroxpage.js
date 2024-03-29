@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "../../components/header/header";
 import { galleryimages } from "./galleryimages";
 import "./nitroxpage.css";
@@ -10,9 +10,9 @@ import icon4 from "./NitroxBAJA.webp";
 import captain from "./VicePre.18ad3964.jpg";
 import vicecaptain from "./Anmoll.24c79311.jpg";
 import evhead from "./Parn.a707c0f0.jpg";
-import icon2 from "./assests/Nitroxgallery_11.25957150.jpg";
-import icon from "./Nitroxgallery_5.55513fbb (1).jpg"
+import icon from "./Nitroxgallery_5.55513fbb (1).jpg";
 import Imagegallary from "../../components/imagegallary/imagegallary";
+import Aboutus from "../../components/Aboutus/Aboutus";
 
 const Nitroxpage = () => {
   const [text] = useTypewriter({
@@ -20,6 +20,9 @@ const Nitroxpage = () => {
     loop: {},
     typeSpeed: 30,
   });
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <Header />
@@ -31,23 +34,7 @@ const Nitroxpage = () => {
             <Cursor />
           </h1>
         </div>
-        <div className="Container-2">
-          <div className="About-Us">
-            <img src={icon2} alt="" />
-            <div className="about-content">
-              <h1>About Team Accelerons</h1>
-              <p>
-                TEAM NITROX is a group of junkies with a shared objective to
-                create a fierce beast of an ATV (All-terrain vehicle). The team
-                was founded back in 2010 under SAE NIT KURUKSHETRA. Since its
-                foundation, the team has grown in all aspects, be its technical
-                or competitive. From one of the few teams that design its own
-                CVT to representing the country in BAJA SAE Illinois, the team
-                has repeatedly provided evidence of its exceptional growth.
-              </p>
-            </div>
-          </div>
-        </div>
+        <Aboutus page="nitrox" />
         <div
           style={{
             width: "100%",
@@ -99,7 +86,7 @@ const Nitroxpage = () => {
             </figure>
           </div>
         </div>
-        <Imagegallary gallaryarray={galleryimages}/>
+        <Imagegallary gallaryarray={galleryimages} />
         <div className="profile-container">
           <h1>Team Representatives</h1>
           <div className="row-p">

@@ -34,11 +34,13 @@ footer {
 }
 
 .col ul {
+  user-select: none;
   list-style: none;
   padding: 0;
   line-height: 25px;
   cursor: pointer;
   li {
+    user-select: none;
     display: flex;
     align-items: center;
     cursor: pointer;

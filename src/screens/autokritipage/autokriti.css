@@ -12,7 +12,7 @@
     opacity: 0.5;
   }
   h1 {
-    width: 500px;
+    width: 550px;
     position: absolute;
     top: 65%;
     left: 50%;
@@ -24,31 +24,42 @@
 
 .carousel {
   margin-top: 50px;
-  height: 100vh;
 }
 
 @media (max-width: 900px) {
-  .carousel {
+  /* .carousel {
     height: 80vh;
-  }
+  } */
 }
 
 @media (max-width: 720px) {
-  .carousel {
-    height: 70vh;
+  .top-container-4 {
+    h1 {
+      width: 450px;
+      font-size: 24px;
+    }
   }
+  /* .carousel {
+    height: 70vh;
+  } */
 }
 
 @media (max-width: 630px) {
   .top-container-4 {
     height: 300px;
   }
-  .carousel {
+  /* .carousel {
     height: 50vh;
-  }
+  } */
 }
 
 @media (max-width: 450px) {
+  .top-container-4 {
+    h1 {
+      width: max-content;
+      font-size: 22px;
+    }
+  }
   .carousel {
     height: 40vh;
   }
@@ -319,9 +330,6 @@ figure.snip1206.hover figcaption p {
     }
   }
 }
-.benefitcarousel {
-  height: 500px;
-}
 .ambassador .roles {
   position: absolute;
   top: 50%;
@@ -373,7 +381,7 @@ figure.snip1206.hover figcaption p {
     outline: none;
   }
 
-  input:active{
+  input:active {
     background-color: transparent;
   }
 }

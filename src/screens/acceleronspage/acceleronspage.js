@@ -1,10 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 // import Imagegallary from "../../components/imagegallary/imagegallary";
 import Header from "../../components/header/header";
 import icon from "./Accelerons.jpeg";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import "./acceleronspage.css";
-import icon2 from "./acceleronsimage.jpg";
 import icon3 from "./supraold.webp";
 import icon4 from "./formulabharat.webp";
 import { gallaryarray } from "./gallaryarray";
@@ -14,6 +13,7 @@ import captain from "./assets/Yasharora.d6916acd.jpg";
 import vicecaptain from "./assets/Bhupeksh.7df9baf5.jpg";
 import evhead from "./assets/man.b3e9680f.png";
 import Footer from "../../components/footer/footer";
+import Aboutus from "../../components/Aboutus/Aboutus";
 
 const Acceleronspage = () => {
   const [text] = useTypewriter({
@@ -21,6 +21,10 @@ const Acceleronspage = () => {
     loop: {},
     typeSpeed: 30,
   });
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>
@@ -33,27 +37,7 @@ const Acceleronspage = () => {
             <Cursor />
           </h1>
         </div>
-        <div className="Container-2">
-          <div className="About-Us">
-            <img src={icon2} alt="" />
-            <div className="about-content">
-              <h1>About Team Accelerons</h1>
-              <p>
-                TEAM ACCELERONS is a student-led engineering team of SAE NIT
-                Kurukshetra. The feeling of speed and precision, the tactical
-                aspects, the way car looks, the way it behaves, that first lap
-                excitement and the intrigues that surround it, are the things
-                that drives the team to DESIGN, BUILD and RACE formula-style
-                cars for the Formula Bharat and SUPRA competitions. From being a
-                first-timer in SUPRA 2014 to standing on top among all NITS in
-                SUPRA 2018, the Team has come a long way, upgrading itself with
-                each passing season.. After all Felipe Massa rightly said, "When
-                you give up your hunger for success you are not racing full
-                heartedly anymore."
-              </p>
-            </div>
-          </div>
-        </div>
+        <Aboutus page="accelerons"/>
         <div
           style={{
             width: "100%",

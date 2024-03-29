@@ -45,7 +45,7 @@ const Footer = () => {
               </Link>
             </li>
             <li>
-              <Link to="/nirox">
+              <Link to="/nitrox">
                 <p>Team nitrox</p>
               </Link>
               <Link to="https://www.instagram.com/nitroxteam" target="_blank">

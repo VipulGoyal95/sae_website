@@ -1,10 +1,13 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../../components/header/header";
 import "./registrationform.css";
 import Footer from "../../components/footer/footer";
 import { CiCircleInfo } from "react-icons/ci";
 
 const Registrationform = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   var [price, setPrice] = useState(0);
   var [accomodatePrice, setAccomodatePrice] = useState(0);
   const [mouseover, setMouseover] = useState(false);

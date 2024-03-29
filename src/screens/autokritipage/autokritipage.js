@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Header from "../../components/header/header";
 // import Carousels from "../../components/autokriticarousels/carousels";
 import "./autokriti.css";
@@ -14,7 +14,6 @@ import icon5 from "./Autokriti5.jpeg";
 import Footer from "../../components/footer/footer";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import icon from "./autokriti13.864242a0.jpg";
-import icon6 from "./AutokritiAboutUs.db8c31fd.jpeg";
 import poster1 from "./cv_evposter.jpeg";
 import poster2 from "./iotposter.jpeg";
 import poster3 from "./softwareposter (1).jpeg";
@@ -28,6 +27,7 @@ import benefit5 from "./benefit-5.jpg";
 import role1 from "./role1.jpg";
 import role2 from "./role2.jpg";
 import role3 from "./role3.jpg";
+import Aboutus from "../../components/Aboutus/Aboutus";
 
 const Autokritipage = () => {
   const [text] = useTypewriter({
@@ -35,6 +35,9 @@ const Autokritipage = () => {
     loop: {},
     typeSpeed: 30,
   });
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const [showbenefit, setShowbenefit] = useState(false);
   const [showRoles, setShowroles] = useState(false);
 
@@ -64,32 +67,14 @@ const Autokritipage = () => {
     <>
       <Header />
       <div className="top-container-4">
-        <img src={icon} alt="sae" />
+        <img src={icon} alt="sae" loading="eager" />
         <h1>
           <br />
           <span className="text">{text}</span>
           <Cursor />
         </h1>
       </div>
-      <div className="Container-2">
-        <div className="About-Us">
-          <img src={icon6} alt="" />
-          <div className="about-content">
-            <h1>About Autokriti</h1>
-            <p>
-              Autokriti is north India's largest automobile workshop which began
-              in 2010. Every year loads of students gets enrolled to gain
-              firsthand knowledge of industrial vehicles. The last held physical
-              autokriti in 2019 saw a participation of 700+ candidates. It
-              involves overhauling of a star engine, which varied from a 2
-              stroke engine of a scooter in Autokriti 1 to 3.6L turbocharged V6
-              Porsche Cayenne in season 11.0; always in cahoots with technology.
-              And not just the gearheads, but geeks from all branches of
-              technology find here the stuffs of their interest.
-            </p>
-          </div>
-        </div>
-      </div>
+      <Aboutus page="autokriti" />
       <Carousel
         autoPlay={true}
         infiniteLoop={true}

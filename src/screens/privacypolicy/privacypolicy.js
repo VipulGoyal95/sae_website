@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "../../components/header/header";
 
 const Privacypolicy = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <Header />
