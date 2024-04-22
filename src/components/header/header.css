@@ -142,8 +142,6 @@
   transition: all 0.5s;
 }
 
-
-
 .nav a:hover {
   background: #357ffd;
 }
@@ -153,7 +151,7 @@ ul {
 }
 
 .hide {
-  transition: all 0.5s;
+  transition: 0.5s;
   display: none;
 }
 

@@ -62,8 +62,11 @@
   box-shadow: 0 0 0 14px #f7f5ec;
   transform: scale(0.7);
 }
-
+.our-team .name{
+  -webkit-user-select: none;
+}
 .our-team .title {
+  -webkit-user-select: none;
   display: block;
   font-size: 15px;
   color: #4e5052;

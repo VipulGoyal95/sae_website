@@ -31,7 +31,7 @@ const Acceleronspage = () => {
       <Header />
       <div className="app-container">
         <div className="top-container-2">
-          <img src={icon} alt="" />
+          <img src={icon} alt="ac" />
           <h1>
             <span className="text">{text}</span>
             <Cursor />

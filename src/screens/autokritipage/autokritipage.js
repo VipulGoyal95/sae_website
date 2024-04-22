@@ -18,16 +18,12 @@ import poster1 from "./cv_evposter.jpeg";
 import poster2 from "./iotposter.jpeg";
 import poster3 from "./softwareposter (1).jpeg";
 import { Link } from "react-router-dom";
-import emailjs from "@emailjs/browser";
-import benefit1 from "./benefit-1.jpg";
-import benefit2 from "./benefit-2.jpg";
-import benefit3 from "./benefit-3.jpg";
-import benefit4 from "./benefit-4.jpg";
-import benefit5 from "./benefit-5.jpg";
-import role1 from "./role1.jpg";
-import role2 from "./role2.jpg";
-import role3 from "./role3.jpg";
+
 import Aboutus from "../../components/Aboutus/Aboutus";
+import Ambassador from "../../components/ambassador/ambassador";
+
+import { FaArrowCircleLeft } from "react-icons/fa";
+import { FaArrowCircleRight } from "react-icons/fa";
 
 const Autokritipage = () => {
   const [text] = useTypewriter({
@@ -38,36 +34,12 @@ const Autokritipage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  const [showbenefit, setShowbenefit] = useState(false);
-  const [showRoles, setShowroles] = useState(false);
 
-  const form = useRef();
-  const sendEmail = (e) => {
-    e.preventDefault();
-
-    emailjs
-      .sendForm(
-        process.env.REACT_APP_SERVICE_ID,
-        process.env.REACT_APP_TEMPLATE_ID1,
-        form.current,
-        {
-          publicKey: process.env.REACT_APP_PUBLIC_KEY,
-        }
-      )
-      .then(
-        () => {
-          console.log("SUCCESS!");
-        },
-        (error) => {
-          console.log("FAILED...", error.text);
-        }
-      );
-  };
   return (
     <>
       <Header />
       <div className="top-container-4">
-        <img src={icon} alt="sae" loading="eager" />
+        <img src={icon} alt="sae" />
         <h1>
           <br />
           <span className="text">{text}</span>
@@ -80,23 +52,37 @@ const Autokritipage = () => {
         infiniteLoop={true}
         interval={2000}
         showThumbs={false}
-        className="carousel"
+        className="autokriti-carousel"
         showStatus={false}
+        renderArrowPrev={(clickHandler, hasPrev) => {
+          return (
+            <div className="leftarrow-container" onClick={clickHandler}>
+              <FaArrowCircleLeft className="leftarrow" />
+            </div>
+          );
+        }}
+        renderArrowNext={(clickHandler, hasNext) => {
+          return (
+            <div className="rightarrow-container" onClick={clickHandler}>
+              <FaArrowCircleRight className="rightarrow" />
+            </div>
+          );
+        }}
       >
-        <div>
+        <div className="auto-slides">
           <img src={icon1} alt="" />
         </div>
-        <div>
+        <div className="auto-slides">
           <img src={icon2} alt="" />
         </div>
-        <div>
+        <div className="auto-slides">
           <img src={icon3} alt="" />
         </div>
-        <div>
-          <img src={icon4} alt="" />
+        <div className="auto-slides">
+          <img src={icon4} alt="" style={{ height: "100%" }} />
         </div>
-        <div>
-          <img src={icon5} alt="" />
+        <div className="auto-slides">
+          <img src={icon5} alt="" style={{ height: "100%" }} />
         </div>
       </Carousel>
       <div className="autokriti">
@@ -131,7 +117,7 @@ const Autokritipage = () => {
           <figure class="snip1206">
             <img src={poster1} alt="sample74" />
             <figcaption>
-              <h1>Combuction Vehicle</h1>
+              <h1 style={{ color: "black" }}>Combuction Vehicle</h1>
               <h2>Engine</h2>
               <h2>Transmission</h2>
               <h2>Vehicle Dynamics</h2>
@@ -141,7 +127,7 @@ const Autokritipage = () => {
           <figure class="snip1206">
             <img src={poster2} alt="sample69" />
             <figcaption>
-              <h1>IOT</h1>
+              <h1 style={{ color: "black" }}>IOT</h1>
               <h2>Comm protocol</h2>
               <h2>Adruino</h2>
               <h2>DAQ</h2>
@@ -151,7 +137,7 @@ const Autokritipage = () => {
           <figure class="snip1206">
             <img src={poster3} alt="sample13" />
             <figcaption>
-              <h1>Software</h1>
+              <h1 style={{ color: "black" }}>Software</h1>
               <h2>SolidWorks</h2>
               <h2>Ansys</h2>
             </figcaption>
@@ -163,165 +149,7 @@ const Autokritipage = () => {
           </Link>
         </div>
       </div>
-      <div className="ambassador">
-        <h1>Become Our ambassador</h1>
-        <div
-          className={
-            showbenefit || showRoles ? "form-container hide" : "form-container"
-          }
-        >
-          <form ref={form} onSubmit={sendEmail}>
-            <label htmlFor="fullname">Full Name*</label>
-            <input className="input" type="text" name="fullname" required />
-            <br />
-            <label htmlFor="college">College Name*</label>
-            <input className="input" type="text" name="college" required />
-            <br />
-            <label htmlFor="branch">Branch* </label>
-            <input className="input" type="text" name="branch" required />
-            <br />
-            <label htmlFor="semester">Current Semester</label>
-            <input className="input" type="number" name="semester" />
-            <br />
-            <label htmlFor="Phone-no">Pnone no*</label>
-            <input className="input" type="number" name="Phone-no" required />
-            <br />
-            <label htmlFor="email">Email id*</label>
-            <input className="input" type="email" name="email" required />
-            <br />
-            <span>Why do you think you can be a Campus Ambassador *</span>
-            <select name="why" id="">
-              <option value="">--select any one--</option>
-              <option value="I am good at Marketing and promotion">I am good at Marketing and promotion</option>
-              <option value="I am not so good in the work, and want to learn">
-                I am not so good in the work, and want to learn
-              </option>
-              <option value="I don't know">I don't know</option>
-              <option value="Other">Other</option>
-            </select>
-            <br />
-            <span>Have you ever been a Campus Ambassador *</span>
-            <select name="past-experience" id="">
-            <option value="">--select any one--</option>
-              <option value="Yes, I am a currently a CA of some other organization as well">
-                Yes, I am a currently a CA of some other organization as well
-              </option>
-              <option value="Yes,I was recently (within last 3 months)">
-                Yes,I was recently (within last 3 months)
-              </option>
-              <option value="Yes, but not that recently">Yes, but not that recently</option>
-              <option value="No">No</option>
-            </select>
-            <br />
-            <div className="next-btn">
-              <input type="submit" value="Next" />
-            </div>
-          </form>
-        </div>
-        <button
-          className="benefits"
-          onClick={() => {
-            if (showbenefit) {
-              setShowroles(false);
-              setShowbenefit(false);
-            } else {
-              setShowroles(false);
-              setShowbenefit(true);
-            }
-          }}
-        >
-          Benefits
-        </button>
-        <button
-          className="roles"
-          onClick={() => {
-            if (showRoles) {
-              setShowbenefit(false);
-              setShowroles(false);
-            } else {
-              setShowbenefit(false);
-              setShowroles(true);
-            }
-          }}
-        >
-          Roles
-        </button>
-        <div className="benefits-container">
-          <div className={showbenefit ? "benefit-1 show" : "benefit-1 hide"}>
-            <h1>Benefits of ambassador</h1>
-            <Carousel
-              autoPlay={true}
-              infiniteLoop={true}
-              interval={2000}
-              showThumbs={false}
-              showStatus={false}
-              showIndicators={false}
-              className="benefitcarousel"
-            >
-              <div className="b-1">
-                <img src={benefit1} alt="" />
-                <h1>1. Performence Based Monetary Incentives</h1>
-              </div>
-              <div className="b-2">
-                <img src={benefit2} alt="" />
-                <h1>2. Earn Commission on Workshops & Webinars</h1>
-              </div>
-              <div className="b-3">
-                <img src={benefit3} alt="" />
-                <h1>3. Marketing and Management Opportunity</h1>
-              </div>
-              <div className="b-4">
-                <img src={benefit4} alt="" />
-                <h1>4. Free Access to Concerned Courses</h1>
-              </div>
-              <div className="b-5">
-                <img src={benefit5} alt="" />
-                <h1>5. Improve Communication Skills</h1>
-              </div>
-            </Carousel>
-            <div style={{ display: "flex", justifyContent: "center" }}>
-              <button
-                className="join-now"
-                onClick={() => setShowbenefit(false)}
-              >
-                Join Now
-              </button>
-            </div>
-          </div>
-        </div>
-        <div className="benefits-container">
-          <div className={showRoles ? "benefit-1 show" : "benefit-1 hide"}>
-            <h1>Role of ammbassador</h1>
-            <Carousel
-              autoPlay={true}
-              infiniteLoop={true}
-              interval={2000}
-              showThumbs={false}
-              showStatus={false}
-              showIndicators={false}
-              className="benefitcarousel"
-            >
-              <div className="b-1">
-                <img src={role1} alt="" />
-                <h1>1. Recruiting students for Worskhop</h1>
-              </div>
-              <div className="b-2">
-                <img src={role2} alt="" />
-                <h1>2. Spreading the Word of our workshop</h1>
-              </div>
-              <div className="b-3">
-                <img src={role3} alt="" />
-                <h1>3. Claim your Ambassador Certificate</h1>
-              </div>
-            </Carousel>
-            <div style={{ display: "flex", justifyContent: "center" }}>
-              <button className="join-now" onClick={() => setShowroles(false)}>
-                Join Now
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Ambassador />
       <Imagegallary gallaryarray={galleryimages} />
       <Footer />
     </>

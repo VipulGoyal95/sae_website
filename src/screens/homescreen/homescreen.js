@@ -36,7 +36,6 @@ const Homescreen = () => {
           <img
             src={icon}
             alt="sae"
-            loading="eager"
           />
           <h1>
             Welcome To

@@ -28,7 +28,7 @@ const Nitroxpage = () => {
       <Header />
       <div className="app-container">
         <div className="top-container-3">
-          <img src={icon} alt="" />
+          <img src={icon} alt="nx" />
           <h1>
             <span className="text">{text}</span>
             <Cursor />

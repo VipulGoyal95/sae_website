@@ -3,6 +3,18 @@ h1 {
   text-align: center;
 }
 
+.contactus-container {
+  display: flex;
+}
+.contactus-left-container {
+  width: 25%;
+  color: white;
+  margin-left: 30px;
+  .address {
+    border: 1px solid white;
+    border-radius: 5px;
+  }
+}
 .form-right-container {
   color: white;
   width: 25%;
@@ -12,20 +24,51 @@ h1 {
   border-radius: 10px;
 }
 
-.form-right-container form label {
-  display: block;
-  margin: 10px 0;
+@media (max-width: 1170px) {
+  .form-right-container {
+    width: 300px;
+  }
+}
+.contactus-field {
+  position: relative;
+  margin-top: 20px;
+}
+.form-right-container form .contactus-field span {
+  position: absolute;
+  top: 0;
+  left: 0%;
+  padding: 5px 0;
+  font-size: 16px;
+  transition: 0.5s;
+  pointer-events: none;
 }
 
 .form-right-container form input[type="text"],
 .form-right-container form input[type="number"],
-.form-right-container form input[type="email"] {
+.form-right-container form input[type="email"],
+.form-right-container form textarea {
   width: 100%;
-  height: 25px;
+  height: 35px;
   background-color: transparent;
   border: none;
   border-bottom: 1px solid white;
   color: white;
+}
+
+.form-right-container form input[type="text"]:focus ~ span,
+.form-right-container form input[type="number"]:focus ~ span,
+.form-right-container form input[type="email"]:focus ~ span,
+.form-right-container form input[type="text"]:valid ~ span,
+.form-right-container form input[type="number"]:valid ~ span,
+.form-right-container form input[type="email"]:valid ~ span,
+.form-right-container form textarea:focus ~ span,
+.form-right-container form textarea:valid ~ span {
+  font-size: 12px;
+  transform: translateX(-20px);
+  transform: translateY(-20px);
+}
+.form-right-container form label {
+  margin: 10px 0;
 }
 .form-right-container form select {
   width: 100%;
@@ -46,9 +89,12 @@ h1 {
   text-align: center;
 }
 .form-right-container form .submitbtn {
-  margin: 20px;
+  margin-top: 30px;
   color: white;
   background-color: orange;
-  border-radius: 5px;
+  border-radius: 10px;
   padding: 7px 15px;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
 }
